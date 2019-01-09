@@ -10,16 +10,37 @@ public class EvilPolygonsChallenge {
 	public static void main(String[] args) {
 		
 		//1. Create a new Robot
+		Robot Guy = new Robot();
 
 		//2. Set the speed to 100
+		Guy.setSpeed(100);
 
 		int colorChoice=JOptionPane.showOptionDialog(null, "hello", "title", JOptionPane.INFORMATION_MESSAGE, JOptionPane.DEFAULT_OPTION, null, new String[]{"Color 1","Color 2", "Color 3"}, 0);
 		
 		//3. Use if statements to check the the value of colorChoice and set the pen color accordingly 
-		
+		if (colorChoice == 1) {
+			Guy.setPenColor(255, 0, 0);
+		} else if (colorChoice == 2) {
+			Guy.setPenColor(0, 255, 0);
+		} else if (colorChoice == 3) {
+			Guy.setPenColor(0, 0, 255);
+		}
 		//4. Ask the use how many polygons they want to be drawn.
+		String Poly = JOptionPane.showInputDialog("How many polygons do you want?");
+		Guy.penDown();
 		
 		//5. Use the robot to draw the number of polygons the user requested.
+		for (int i = 0; i < Integer.parseInt(Poly); i++) {
+			Guy.move(50);
+			Guy.turn(45);
+			Guy.move(50);
+			Guy.turn(45);
+			Guy.move(50);
+			Guy.turn(45);
+			Guy.move(50);
+			Guy.turn(45);
+			Guy.move(100);
+		}
 		
 		//6. Make it so your shapes do not overlap
 
