@@ -31,15 +31,14 @@ public class EvilPolygonsChallenge {
 		
 		//5. Use the robot to draw the number of polygons the user requested.
 		for (int i = 0; i < Integer.parseInt(Poly); i++) {
-			Guy.move(50);
-			Guy.turn(45);
-			Guy.move(50);
-			Guy.turn(45);
-			Guy.move(50);
-			Guy.turn(45);
-			Guy.move(50);
-			Guy.turn(45);
-			Guy.move(100);
+			for (int j = 0; j < 10; j++) {
+				Guy.move(50);
+				Guy.turn(45);
+			}
+			Guy.penUp();
+			Guy.setAngle(90);
+			Guy.move(120);
+			Guy.penDown();
 		}
 		
 		//6. Make it so your shapes do not overlap
