@@ -72,12 +72,30 @@ public class ForloopGaunlet {
 		System.out.println("\n");
 
 		// Loop 9
-		for (int i = 0; i <= 6; i += 3) {
-			System.out.print(i);
-			for (int j = 1; j < 3; j++) {
-				System.out.print((j + 1) + " ");
+		for (int j = 1; j < 10; j += 3) {
+			for (int i = 0; i < 3; i++) {
+				System.out.print(j + i);
 			}
-
+			System.out.println();
+		}
+		
+		System.out.println("\n");
+		
+		// Loop 10
+		for (int j = 0; j < 100; j += 10) {
+			for (int i = 1; i < 11; i++) {
+				System.out.print(i + j + " ");
+			}
+			System.out.println();
+		}
+		
+		System.out.println("\n");
+		
+		//Loop 11
+		for (int i = 1; i < 11; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print("* ");
+			}
 			System.out.println();
 		}
 	}
